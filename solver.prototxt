@@ -1,0 +1,19 @@
+train_net: "trainval_hdf5.prototxt"
+display: 10
+average_loss: 10
+base_lr: 5e-8
+lr_policy: "poly"
+power: 1.0 #linearly decrease LR
+momentum: 0.9
+weight_decay: 0.0002
+iter_size: 1
+max_iter: 2000000
+snapshot: 500 # 1 epoch = 20000
+snapshot_prefix: "/snapshot/train"
+test_initialization: false
+type: "SGD"
+random_seed: 42
+solver_mode: GPU
+# batch_size: 20
+# no val net
+# no resumes
